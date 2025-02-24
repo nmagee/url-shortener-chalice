@@ -21,7 +21,7 @@
           "dynamodb:DescribeTable",
           "dynamodb:BatchWriteItem"
         ],
-        "Resource": ["arn:aws:dynamodb:*:*:table/url-shortener-table"],
+        "Resource": ["arn:aws:dynamodb:*:*:table/url-shortener"],
         "Effect": "Allow"
       }
     ]

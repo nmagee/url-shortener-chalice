@@ -12,13 +12,13 @@ def get_dynamo_db_table():
     Get the configured dynamodb db table.
     """
     dynamodb = boto3.resource('dynamodb')
-    table = dynamodb.Table('url-shortener-table')
+    table = dynamodb.Table('url-shortener')
     return table
 
 
-def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
+def id_generator(size=3, chars="abcdef0123456789"):
     """
-    Generate a random ID of length 6.
+    Generate a random ID of length 3 using only hexadecimal characters.
     """
     return ''.join(random.choice(chars) for _ in range(size))
 
@@ -59,9 +59,9 @@ def truncate_table(table):
 
 @app.route('/')
 def index():
-    return {'message': 'This is a simple api shortener API using AWS Chalice python serverless framework.'}
+    return {'message': 'A simple api shortener API.'}
 
-@app.route('/shorten-me', methods=['POST'])
+@app.route('/zz-shorten', methods=['POST'])
 def generate_shortened_url():
     data = app.current_request.json_body
     try:

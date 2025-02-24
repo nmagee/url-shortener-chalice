@@ -3,7 +3,7 @@ Resources:
   urlShortener:
     Type: AWS::DynamoDB::Table
     Properties:
-      TableName: url-shortener-table
+      TableName: url-shortener
       AttributeDefinitions:
         - AttributeName: "id"
           AttributeType: "S" 
