@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "app_name": "url-shortner",
+  "app_name": "url-shortener",
   "stages": {
     "dev": {
       "api_gateway_stage": "api",

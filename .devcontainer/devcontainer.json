@@ -6,7 +6,8 @@
 	"image": "mcr.microsoft.com/devcontainers/python:1-3.12-bullseye",
 
 	"mounts": [
-		"source=/Users/nem2p/.aws,target=/home/vscode/.aws,type=bind"
+		"source=/Users/nem2p/.aws,target=/home/vscode/.aws,type=bind",
+		"source=/Users/nem2p/.ssh,target=/home/vscode/.ssh,type=bind"
 	],
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
