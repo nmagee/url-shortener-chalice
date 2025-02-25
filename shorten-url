@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+
+import json
+import requests
+import sys
+
+post_url = "https://l.uvasds.sh/zz-shorten"
+header = {"Content-Type": "application/json"}
+
+def shorten_url(url):
+    data = {"original-url": url}
+    response = requests.post(post_url, headers=header, data=json.dumps(data))
+    short_url = response.json()['shorturl']
+    #print(response.json())
+    print(short_url)
+
+if __name__ == "__main__":
+    # get the URL as a pararameter when you run the script
+    if len(sys.argv) != 2:
+        print("Usage: shorten-url <URL>")
+        sys.exit(1)
+    else:
+        url = sys.argv[1]
+        # url = input("Enter the URL to shorten: ")
+        shorten_url(url)
+
+# /usr/bin/curl -X POST -d "{'original-url':'$1'}"

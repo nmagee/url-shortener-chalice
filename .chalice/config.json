@@ -6,5 +6,6 @@
       "api_gateway_stage": "api",
       "autogen_policy": false
     }
-  }
+  },
+  "iam_policy_file": "policy.json"
 }
